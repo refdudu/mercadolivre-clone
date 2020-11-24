@@ -15,6 +15,10 @@ import SellerInfo from "../SellerInfo";
 import ProductAction from "../ProductAction";
 
 const Product: React.FC = () => {
+
+  const screenWidth = window.innerWidth;
+console.log(screenWidth);
+  
   return (
     <Container>
       <Row>
@@ -26,7 +30,7 @@ const Product: React.FC = () => {
           <Gallery>
             <img src={tshirtImage} alt="T-Shirt" />
           </Gallery>
-          <Info />
+          {screenWidth > 760 && (<Info />) }
         </Column>
         <Column>
           <ProductAction/>
@@ -34,6 +38,7 @@ const Product: React.FC = () => {
           <WarrantySection />
           <WarrantySection />
           <WarrantySection />
+          {screenWidth <= 760 && (<Info />) }
         </Column>
       </Panel>
     </Container>

@@ -10,7 +10,11 @@ export const Row = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 16px 0;
-
+  
+  @media(max-width:768px){
+    justify-content:center;
+  }
+  
   > a {
     font-size: 14px;
     text-decoration: none;
@@ -30,6 +34,9 @@ export const Panel = styled.div`
   box-shadow: var(--panel-shadow);
   display: grid;
   grid-template-columns: 65fr 35fr;
+  @media(max-width:768px){
+    display:block;
+  }
 `;
 
 export const Column = styled.div`
